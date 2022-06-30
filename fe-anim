@@ -8,8 +8,13 @@ local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Main")
     
     
-MainSection:NewButton("Fe Anim", "Fe Animations", function()
-    local Folder = Instance.new('Folder', game:GetService("Workspace"))
+    
+MainSection:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.V, function()
+	Library:ToggleUI()
+end)
+
+MainSection:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.C, function()
+	local Folder = Instance.new('Folder', game:GetService("Workspace"))
 	local AnimationPack = game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.AnimationPack
 	local ScrollingFrame = AnimationPack.ScrollingFrame
 	local CloseButton = AnimationPack.CloseButton
@@ -305,10 +310,6 @@ local Folder = Instance.new('Folder', game:GetService("Workspace"))
 			Praying:Play()
 		end)
 	end)
-end)    
-    
-Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.V, function()
-	Library:ToggleUI()
 end)
 
     
