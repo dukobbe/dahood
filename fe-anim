@@ -9,11 +9,11 @@ local MainSection = Main:NewSection("Main")
     
     
     
-MainSection:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.V, function()
+MainSection:NewKeybind("KeybindText", "Press V to toggle GUI", Enum.KeyCode.V, function()
 	Library:ToggleUI()
 end)
 
-MainSection:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.C, function()
+MainSection:NewKeybind("KeybindText", "FE Animations", Enum.KeyCode.N, function()
 	local Folder = Instance.new('Folder', game:GetService("Workspace"))
 	local AnimationPack = game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui.AnimationPack
 	local ScrollingFrame = AnimationPack.ScrollingFrame
