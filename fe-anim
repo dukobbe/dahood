@@ -9,11 +9,11 @@ local MainSection = Main:NewSection("Main")
     
     
     
-MainSection:NewKeybind("KeybindText", "Press V to toggle GUI", Enum.KeyCode.V, function()
+MainSection:NewKeybind("Toggle GUI", "Press V to toggle GUI", Enum.KeyCode.V, function()
 	Library:ToggleUI()
 end)
 
-MainSection:NewKeybind("KeybindText", "FE Animations", Enum.KeyCode.N, function()
+MainSection:NewKeybind("Animations Pack", "FE Animations", Enum.KeyCode.N, function()
 		for _, v in next, game:GetService("CoreGui"):GetChildren() do
 	    if (v.Name:match("Animation")) then
 		v:Destroy()
@@ -276,4 +276,3 @@ end)
     
     
 end
-    
